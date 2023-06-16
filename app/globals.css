@@ -2,26 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  p {
+    @apply text-slate-300;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer utilities {
+  body {
+    background-image: url(".././public/bg2.svg");
+    background-attachment: fixed;
+  }
+  .glass {
+    box-sizing: border-box;
+    background: rgba(217, 217, 217, 0.121);
+    backdrop-filter: blur(19.8478px);
+    border: 2px solid
+      linear-gradient(
+        180deg,
+        rgba(217, 217, 217, 0.121),
+        rgba(217, 217, 217, 0.066)
+      );
+    transition-duration: 0.6s;
+  }
+  .glass:hover {
+    box-shadow: 0px 0px 80px rgba(217, 217, 217, 0.169);
+  }
+
+  .heading {
+    background: radial-gradient(
+      123.44% 123.44% at 56.63% 100%,
+      #ececee 6.77%,
+      rgba(255, 255, 255, 0.45) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .bgDesign {
+    background: rgba(255, 255, 255, 0.08);
+    filter: blur(100px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
