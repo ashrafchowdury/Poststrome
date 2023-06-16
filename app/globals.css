@@ -25,9 +25,9 @@
       );
     transition-duration: 0.6s;
   }
-  .glass:hover {
+  /* .glass:hover {
     box-shadow: 0px 0px 80px rgba(217, 217, 217, 0.169);
-  }
+  } */
 
   .heading {
     background: radial-gradient(

@@ -4,6 +4,9 @@ import {
   FaLinkedin,
   FaTimes,
   FaRegEdit,
+  FaChessBoard,
+  FaRedditAlien,
+  FaFacebookF,
 } from "react-icons/fa";
 import {
   BsFolderCheck,
@@ -14,8 +17,15 @@ import {
   BsTrash,
   BsClipboard2,
   BsStars,
+  BsBoundingBoxCircles,
+  BsFullscreen,
+  BsTextareaT,
+  BsArrowClockwise,
+  BsFillMoonStarsFill,
+  BsSun,
+  BsInstagram,
 } from "react-icons/bs";
-import { BiUndo, BiRedo } from "react-icons/bi";
+import { BiUndo, BiRedo, BiRename, BiAdjust } from "react-icons/bi";
 
 type IconcType = {
   style?: string;
@@ -31,6 +41,18 @@ export const TwitterIcon = ({ style }: IconcType) => {
 
 export const LinkedinIcon = ({ style }: IconcType) => {
   return <FaLinkedin className={`${style}`} />;
+};
+
+export const InstaIcon = ({ style }: IconcType) => {
+  return <BsInstagram className={`${style}`} />;
+};
+
+export const RedditIcon = ({ style }: IconcType) => {
+  return <FaRedditAlien className={`${style}`} />;
+};
+
+export const FacebookIcon = ({ style }: IconcType) => {
+  return <FaFacebookF className={`${style}`} />;
 };
 
 export const SaveIcon = ({ style }: IconcType) => {
@@ -79,4 +101,40 @@ export const RedoIcon = ({ style }: IconcType) => {
 
 export const StarsIcon = ({ style }: IconcType) => {
   return <BsStars className={`${style}`} />;
+};
+
+export const BgIcon = ({ style }: IconcType) => {
+  return <FaChessBoard className={`${style}`} />;
+};
+
+export const BorderIcon = ({ style }: IconcType) => {
+  return <BsBoundingBoxCircles className={`${style}`} />;
+};
+
+export const MediaSizeIcon = ({ style }: IconcType) => {
+  return <BsFullscreen className={`${style}`} />;
+};
+
+export const FontSizeIcon = ({ style }: IconcType) => {
+  return <BsTextareaT className={`${style}`} />;
+};
+
+export const RenameIcon = ({ style }: IconcType) => {
+  return <BiRename className={`${style}`} />;
+};
+
+export const ThemeIcon = ({ style }: IconcType) => {
+  return <BiAdjust className={`${style}`} />;
+};
+
+export const RotateIcon = ({ style }: IconcType) => {
+  return <BsArrowClockwise className={`${style}`} />;
+};
+
+export const MoonIcon = ({ style }: IconcType) => {
+  return <BsFillMoonStarsFill className={`${style}`} />;
+};
+
+export const SunIcon = ({ style }: IconcType) => {
+  return <BsSun className={`${style}`} />;
 };
