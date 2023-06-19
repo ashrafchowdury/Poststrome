@@ -2,6 +2,7 @@
 
 import {
   useState,
+  useEffect,
   useContext,
   createContext,
   FC,
@@ -9,8 +10,11 @@ import {
   SetStateAction,
   ReactNode,
 } from "react";
+import { apiCaller } from "@/utils/functions/apiCaller";
 
 type SutdioContextType = {
+  media: any;
+  setMedia: Dispatch<SetStateAction<any>>;
   mediaBg: string;
   setMediaBg: Dispatch<SetStateAction<string>>;
   mediaTheme: string;
@@ -35,9 +39,10 @@ export const SutdioContext = createContext<SutdioContextType | null>(null);
 export const useStudio = () => useContext(SutdioContext)!;
 
 const StudioContextProvider: FC<ChildrenType> = ({ children }) => {
-  const [mediaBg, setMediaBg] = useState("");
+  const [media, setMedia] = useState({});
+  const [mediaBg, setMediaBg] = useState("ffafcc");
   const [mediaTheme, setMediaTheme] = useState("light");
-  const [fontSize, setFontSize] = useState(16);
+  const [fontSize, setFontSize] = useState(14);
   const [mediaSizes, setMediaSizes] = useState({
     width: "680px",
     height: "auto",
@@ -50,7 +55,17 @@ const StudioContextProvider: FC<ChildrenType> = ({ children }) => {
   const [isEditor, setIsEditor] = useState("");
   const [searchData, setSearchData] = useState("");
 
+  useEffect(() => {
+    apiCaller(
+      "api/repository",
+      "https://github.com/ashrafchowdury/dotemd",
+      setMedia
+    );
+  }, []);
+
   const value: SutdioContextType = {
+    media,
+    setMedia,
     mediaBg,
     setMediaBg,
     mediaTheme,
@@ -66,6 +81,7 @@ const StudioContextProvider: FC<ChildrenType> = ({ children }) => {
     isEditor,
     setIsEditor,
   };
+
   return (
     <SutdioContext.Provider value={value}>{children}</SutdioContext.Provider>
   );
