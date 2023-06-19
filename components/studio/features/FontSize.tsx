@@ -8,7 +8,7 @@ const FontSize = () => {
       <p className=" text-sm font-medium mb-4">Media Font Size</p>
       <input
         type="range"
-        min={10}
+        min={14}
         max={30}
         step={1}
         defaultValue={14}

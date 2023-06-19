@@ -24,8 +24,22 @@ import {
   BsFillMoonStarsFill,
   BsSun,
   BsInstagram,
+  BsEye,
 } from "react-icons/bs";
-import { BiUndo, BiRedo, BiRename, BiAdjust } from "react-icons/bi";
+import {
+  BiUndo,
+  BiRedo,
+  BiRename,
+  BiAdjust,
+  BiGitPullRequest,
+  BiGitRepoForked,
+  BiDisc,
+  BiStar,
+  BiGitBranch,
+  BiLinkExternal,
+  BiHash,
+} from "react-icons/bi";
+import { GoLaw } from "react-icons/go";
 
 type IconcType = {
   style?: string;
@@ -137,4 +151,40 @@ export const MoonIcon = ({ style }: IconcType) => {
 
 export const SunIcon = ({ style }: IconcType) => {
   return <BsSun className={`${style}`} />;
+};
+
+export const ForkIcon = ({ style }: IconcType) => {
+  return <BiGitRepoForked className={`${style}`} />;
+};
+
+export const EyeIcon = ({ style }: IconcType) => {
+  return <BsEye className={`${style}`} />;
+};
+
+export const StarIcon = ({ style }: IconcType) => {
+  return <BiStar className={`${style}`} />;
+};
+
+export const LawIcon = ({ style }: IconcType) => {
+  return <GoLaw className={`${style}`} />;
+};
+
+export const IssueIcon = ({ style }: IconcType) => {
+  return <BiDisc className={`${style}`} />;
+};
+
+export const PrIcon = ({ style }: IconcType) => {
+  return <BiGitPullRequest className={`${style}`} />;
+};
+
+export const BranchIcon = ({ style }: IconcType) => {
+  return <BiGitBranch className={`${style}`} />;
+};
+
+export const LinkIcon = ({ style }: IconcType) => {
+  return <BiLinkExternal className={`${style}`} />;
+};
+
+export const HashIcon = ({ style }: IconcType) => {
+  return <BiHash className={`${style}`} />;
 };

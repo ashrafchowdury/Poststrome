@@ -8,7 +8,7 @@ const Border = () => {
       <p className=" text-sm font-medium mb-4">Media Border</p>
       <input
         type="range"
-        min={10}
+        min={0}
         max={30}
         step={1}
         defaultValue={0}
@@ -21,8 +21,8 @@ const Border = () => {
       <p className=" text-sm font-medium mb-4 mt-10">Border Reduce</p>
       <input
         type="range"
-        min={10}
-        max={30}
+        min={0}
+        max={50}
         step={1}
         defaultValue={12}
         className="w-full"
