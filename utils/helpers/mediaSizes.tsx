@@ -7,11 +7,11 @@ import {
 } from "@/components/ui/Icons";
 
 export const sizes = [
-  { size: "1200 x 600", icon: <TwitterIcon /> },
-  { size: "1000 x 700", icon: <LinkedinIcon /> },
-  { size: "1200 x 800", icon: <InstaIcon /> },
-  { size: "400 x 1200", icon: <InstaIcon /> },
-  { size: "1400 x 800", icon: <RedditIcon /> },
-  { size: "1200 x 800", icon: <FacebookIcon /> },
-  { size: "400 x 1200", icon: <FacebookIcon /> },
+  { size: "1600 x 900", icon: <TwitterIcon /> },
+  { size: "1200 x 627", icon: <LinkedinIcon /> },
+  { size: "1080 x 566", icon: <InstaIcon /> },
+  // { size: "1080 x 1920", icon: <InstaIcon /> },
+  { size: "1200 x 628", icon: <RedditIcon /> },
+  { size: "1200 x 630", icon: <FacebookIcon /> },
+  // { size: "1080 x 1920", icon: <FacebookIcon /> },
 ];

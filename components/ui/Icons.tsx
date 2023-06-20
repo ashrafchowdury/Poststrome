@@ -2,7 +2,6 @@ import {
   FaGithub,
   FaTwitter,
   FaLinkedin,
-  FaTimes,
   FaRegEdit,
   FaChessBoard,
   FaRedditAlien,
@@ -25,6 +24,7 @@ import {
   BsSun,
   BsInstagram,
   BsEye,
+  BsLayersHalf,
 } from "react-icons/bs";
 import {
   BiUndo,
@@ -38,6 +38,7 @@ import {
   BiGitBranch,
   BiLinkExternal,
   BiHash,
+  BiPlus,
 } from "react-icons/bi";
 import { GoLaw } from "react-icons/go";
 
@@ -97,8 +98,8 @@ export const CopyIcon = ({ style }: IconcType) => {
   return <BsClipboard2 className={`${style}`} />;
 };
 
-export const CroseIcon = ({ style }: IconcType) => {
-  return <FaTimes className={`${style}`} />;
+export const AddIcon = ({ style }: IconcType) => {
+  return <BiPlus className={`${style}`} />;
 };
 
 export const EditIcon = ({ style }: IconcType) => {
@@ -187,4 +188,8 @@ export const LinkIcon = ({ style }: IconcType) => {
 
 export const HashIcon = ({ style }: IconcType) => {
   return <BiHash className={`${style}`} />;
+};
+
+export const ShadowIcon = ({ style }: IconcType) => {
+  return <BsLayersHalf className={`${style}`} />;
 };

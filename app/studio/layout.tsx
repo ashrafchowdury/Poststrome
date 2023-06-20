@@ -5,7 +5,7 @@ export default function StudioLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="w-[80%] mx-auto h-screen overflow-hidden">
+    <section className="xl:w-[1200px] mx-auto h-screen overflow-hidden">
       <StudioContextProvider>{children}</StudioContextProvider>
     </section>
   );

@@ -1,6 +1,6 @@
 import Features from "@/components/studio/Features";
 import Navigation from "@/components/studio/Navigation";
-import Preview from "@/components/studio/Preview";
+import Media from "@/components/studio/Media";
 
 const Studio = () => {
   return (
@@ -9,7 +9,7 @@ const Studio = () => {
 
       <section className="w-full h-[80vh] flex items-center justify-between">
         <Features />
-        <Preview />
+        <Media />
       </section>
     </main>
   );
