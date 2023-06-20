@@ -2,7 +2,7 @@ import { sizes } from "@/utils/helpers/mediaSizes";
 import { useStudio } from "@/context/StudioContext";
 
 const MediaSizes = () => {
-  const { setMediaSizes } = useStudio();
+  const { mediaSizes, setMediaSizes } = useStudio();
   return (
     <>
       <p className=" text-sm font-medium mb-4">Different Sizes</p>
@@ -14,7 +14,10 @@ const MediaSizes = () => {
           return (
             <div className=" flex flex-col items-center mr-4 my-2" key={ind}>
               <button
-                className="glass w-[37px] h-[37px] rounded-lg flex items-center justify-center"
+                className={` ${
+                  `${height}px` == mediaSizes.height &&
+                  "ring-2 ring-neutral-200"
+                } glass w-[37px] h-[37px] rounded-lg flex items-center justify-center`}
                 onClick={() => {
                   setMediaSizes({ width: `${width}px`, height: `${height}px` });
                 }}

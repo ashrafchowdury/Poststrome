@@ -38,14 +38,16 @@ type BgColorsType = {
 };
 
 export const BgColors = ({ colors, generateBg }: BgColorsType) => {
-  const { setMediaBg } = useStudio();
+  const { mediaBg, setMediaBg } = useStudio();
   return (
     <>
       <div className="w-full flex flex-wrap items-center">
         {colors.map((data: string): any => {
           return (
             <button
-              className=" w-[35px] h-[35px] rounded-lg mr-3 my-2"
+              className={` ${
+                data == mediaBg && "ring-2 ring-neutral-200"
+              } w-[35px] h-[35px] rounded-lg mr-3 my-2 duration-200`}
               style={{ background: data, backgroundColor: `#${data}` }}
               key={data}
               onClick={() => setMediaBg(data)}

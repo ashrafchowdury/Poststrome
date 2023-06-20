@@ -7,7 +7,7 @@ const FeaturesEditor = () => {
 
   if (!isEditor) null;
   return (
-    <section className="glass w-[280px] h-[70vh] rounded-xl -ml-8 pl-12 py-5 pr-4">
+    <section className="glass w-[280px] h-[74vh] rounded-xl -ml-8 pl-12 py-5 pr-4">
       <div className=" flex items-center justify-between mb-12">
         <p className=" text-sm"> {isEditor} </p>
         <button className="rounded-lg text-sm" onClick={() => setIsEditor("")}>

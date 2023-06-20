@@ -8,7 +8,7 @@ const Rename = () => {
       <p className=" text-sm font-medium mb-4">Rename Media</p>
       <textarea
         placeholder="Rewrite The Post"
-        className=" bg-transparent outline-none text-sm w-full h-[120px] px-4 py-3 rounded-lg border-2 border-neutral-700"
+        className=" bg-transparent outline-none focus:ring-2 focus:ring-neutral-200 text-sm w-full h-[120px] px-4 py-3 rounded-lg border-2 border-neutral-700 duration-200"
         value={mediaRename}
         onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
           setMediaRename(e.target.value)

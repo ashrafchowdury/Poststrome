@@ -12,6 +12,7 @@
   body {
     background-image: url(".././public/bg2.svg");
     background-attachment: fixed;
+    background-color: black;
   }
   .glass {
     box-sizing: border-box;
