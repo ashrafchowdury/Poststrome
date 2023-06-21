@@ -39,6 +39,7 @@ import {
   BiLinkExternal,
   BiHash,
   BiPlus,
+  BiLoader,
 } from "react-icons/bi";
 import { GoLaw } from "react-icons/go";
 
@@ -192,4 +193,8 @@ export const HashIcon = ({ style }: IconcType) => {
 
 export const ShadowIcon = ({ style }: IconcType) => {
   return <BsLayersHalf className={`${style}`} />;
+};
+
+export const LoadingIcon = ({ style }: IconcType) => {
+  return <BiLoader className={`${style}`} />;
 };

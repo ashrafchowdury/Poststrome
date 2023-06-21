@@ -1,8 +1,9 @@
+import { ChangeEvent } from "react";
 import { sizes } from "@/utils/helpers/mediaSizes";
 import { useStudio } from "@/context/StudioContext";
 
 const MediaSizes = () => {
-  const { mediaSizes, setMediaSizes } = useStudio();
+  const { mediaSizes, setMediaSizes, mediaScale, setMediaScale } = useStudio();
   return (
     <>
       <p className=" text-sm font-medium mb-4">Different Sizes</p>
@@ -29,6 +30,19 @@ const MediaSizes = () => {
           );
         })}
       </div>
+
+      <p className=" text-sm font-medium mb-4 mt-8">Zoom In & Zoom Out</p>
+      <input
+        type="range"
+        min={0.6}
+        max={1.5}
+        step={0.1}
+        defaultValue={mediaScale}
+        className="w-full"
+        onChange={(e: ChangeEvent<HTMLInputElement>) =>
+          setMediaScale(Number(e.target.value))
+        }
+      />
     </>
   );
 };
