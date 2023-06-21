@@ -9,14 +9,16 @@ import {
   Dispatch,
   SetStateAction,
   ReactNode,
+  useRef,
+  Ref,
 } from "react";
 import { apiCaller } from "@/utils/functions/apiCaller";
 
 type SutdioContextType = {
   media: any;
   setMedia: Dispatch<SetStateAction<any>>;
-  isLoading: boolean;
-  setIsLoading: Dispatch<SetStateAction<boolean>>;
+  isDownload: boolean;
+  setIsDownload: Dispatch<SetStateAction<boolean>>;
   isError: string;
   setIsError: Dispatch<SetStateAction<string>>;
   mediaBg: string;
@@ -27,6 +29,8 @@ type SutdioContextType = {
   setFontSize: Dispatch<SetStateAction<number>>;
   mediaSizes: { width: string; height: string };
   setMediaSizes: Dispatch<SetStateAction<{ width: string; height: string }>>;
+  mediaScale: number;
+  setMediaScale: Dispatch<SetStateAction<number>>;
   borders: { border: number; reduce: number; color: string };
   setBorders: Dispatch<
     SetStateAction<{ border: number; reduce: number; color: string }>
@@ -37,6 +41,7 @@ type SutdioContextType = {
   setMediaShadow: Dispatch<SetStateAction<number>>;
   isEditor: string;
   setIsEditor: Dispatch<SetStateAction<string>>;
+  mediaRef: Ref<HTMLElement>;
 };
 
 type ChildrenType = {
@@ -48,7 +53,7 @@ export const useStudio = () => useContext(SutdioContext)!;
 
 const StudioContextProvider: FC<ChildrenType> = ({ children }) => {
   const [media, setMedia] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
+  const [isDownload, setIsDownload] = useState(false);
   const [isError, setIsError] = useState("");
   const [mediaBg, setMediaBg] = useState("ffafcc");
   const [mediaTheme, setMediaTheme] = useState("dark");
@@ -57,6 +62,7 @@ const StudioContextProvider: FC<ChildrenType> = ({ children }) => {
     width: "680px",
     height: "auto",
   });
+  const [mediaScale, setMediaScale] = useState(1);
   const [borders, setBorders] = useState({
     border: 0,
     reduce: 12,
@@ -65,6 +71,8 @@ const StudioContextProvider: FC<ChildrenType> = ({ children }) => {
   const [mediaShadow, setMediaShadow] = useState(0);
   const [mediaRename, setMediaRename] = useState("");
   const [isEditor, setIsEditor] = useState("Add");
+  // refs
+  const mediaRef = useRef(null);
 
   useEffect(() => {
     try {
@@ -73,7 +81,6 @@ const StudioContextProvider: FC<ChildrenType> = ({ children }) => {
         "https://github.com/ashrafchowdury/dotemd",
         setMedia
       );
-      setIsLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -82,14 +89,16 @@ const StudioContextProvider: FC<ChildrenType> = ({ children }) => {
   const value: SutdioContextType = {
     media,
     setMedia,
-    isLoading,
-    setIsLoading,
+    isDownload,
+    setIsDownload,
     isError,
     setIsError,
     mediaBg,
     setMediaBg,
     mediaTheme,
     setMediaTheme,
+    mediaScale,
+    setMediaScale,
     fontSize,
     setFontSize,
     mediaSizes,
@@ -102,6 +111,7 @@ const StudioContextProvider: FC<ChildrenType> = ({ children }) => {
     setMediaShadow,
     isEditor,
     setIsEditor,
+    mediaRef,
   };
 
   return (

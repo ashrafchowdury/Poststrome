@@ -13,6 +13,7 @@ const Add = () => {
     const url = event.target[0].value;
 
     if (url?.includes("https://github.com/")) {
+      setMedia({});
       apiCaller("api/repository", url, setMedia);
       isError && setIsError("");
     } else {

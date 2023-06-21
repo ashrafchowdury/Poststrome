@@ -5,7 +5,7 @@ import { useStudio } from "@/context/StudioContext";
 import { feaures } from "@/utils/helpers/features";
 
 const Features = () => {
-  const { isEditor, setIsEditor } = useStudio();
+  const { isEditor, setIsEditor, isDownload } = useStudio();
   const handleEditor = (title: string) => {
     if (title == isEditor) {
       setIsEditor("");
@@ -28,6 +28,7 @@ const Features = () => {
               <button
                 className="glass w-[45px] h-[45px] text-xl rounded-lg flex items-center justify-center"
                 onClick={() => handleEditor(data.title)}
+                disabled={isDownload}
               >
                 {data.icon}
               </button>

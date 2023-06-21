@@ -18,6 +18,7 @@ export const Repository = () => {
     mediaRename,
     mediaTheme,
     mediaShadow,
+    mediaScale,
   } = useStudio();
 
   const exLightTheme = mediaTheme == "dark" ? "glass" : "bg-slate-200"; //extra light theme
@@ -33,6 +34,7 @@ export const Repository = () => {
         }  w-[620px]`}
         style={{
           boxShadow: mediaShadow > 0 ? `4px 8px ${mediaShadow}px black` : "",
+          transform: `scale(${mediaScale})`,
         }}
       >
         <header
@@ -54,11 +56,12 @@ export const Repository = () => {
 
         <section className="flex flex-col items-start px-4 mb-5">
           <div className="text-[16px] flex items-center">
-            <Image
+            {/* We are using normal img tag instead of Image component because the dom-to-image library dosen't support it */}
+            <img
               src={data?.owner.avatar_url}
               alt="image"
-              width={24}
-              height={24}
+              width="24px"
+              height="24px"
               className=" rounded-full mr-2"
             />{" "}
             <span className=" font-medium">{data?.full_name}</span>
