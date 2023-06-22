@@ -22,7 +22,7 @@ const Add = () => {
   };
   return (
     <>
-      <p className=" text-sm font-medium mb-4">Add Repository URL</p>
+      <p className=" md:text-sm text-xs font-medium mb-4">Add Repository URL</p>
       <form className=" relative w-full" onSubmit={handleSearchURL}>
         <SearchIcon style=" absolute top-[10px] left-[10px] text-sm text-neutral-600" />
         <input

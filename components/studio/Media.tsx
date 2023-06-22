@@ -13,14 +13,14 @@ const Media = () => {
 
   return (
     <section
-      className=" bg-white w-[850px] h-[560px]"
+      className=" bg-white xl:w-[850px] xl:h-[560px] md:w-[800px] md:h-[520px] sm:w-[700px] sm:h-[450px] w-[600px] h-[420px] lg:scale-100 md:scale-[0.8] sm:scale-[0.7] scale-[0.5]"
       style={{
         borderRadius: `${borders.reduce + 3}px`,
       }}
       ref={mediaRef}
     >
       <div
-        className="w-[850px] h-[560px] flex items-center justify-center overflow-hidden"
+        className="xl:w-[850px] xl:h-[560px] md:w-[800px] md:h-[520px] sm:w-[700px] sm:h-[450px] w-[600px] h-[420px] flex items-center justify-center overflow-hidden"
         style={{
           border: `${borders.border}px solid ${borders.color}`,
           borderRadius: `${borders.reduce}px`,

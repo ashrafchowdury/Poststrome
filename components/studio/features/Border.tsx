@@ -6,7 +6,9 @@ const Border = () => {
 
   return (
     <>
-      <p className=" text-sm font-medium mb-4">Media Border</p>
+      <p className=" md:text-sm text-xs font-medium md:mb-4 mb-2">
+        Media Border
+      </p>
       <input
         type="range"
         min={0}
@@ -18,11 +20,11 @@ const Border = () => {
           setBorders({ ...borders, border: Number(e.target.value) })
         }
       />
-      <p className=" text-sm font-medium mb-3 mt-4">Border Color</p>
+      <p className=" md:text-sm text-xs font-medium mb-3 mt-4">Border Color</p>
       <div className="w-full h-[40px] overflow-hidden rounded-lg">
         <input
           type="color"
-          className="bg-transparent w-[300px] rounded-full h-[55px] cursor-pointer -ml-1 -mt-2"
+          className="bg-transparent w-[110%] rounded-full h-[55px] cursor-pointer -ml-1 -mt-2"
           defaultValue={borders.color}
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
             setBorders({ ...borders, color: e.target.value })
@@ -30,7 +32,9 @@ const Border = () => {
         />
       </div>
 
-      <p className=" text-sm font-medium mb-4 mt-10">Border Reduce</p>
+      <p className=" md:text-sm text-xs font-medium md:mb-4 mb-2 md:mt-10 mt-6">
+        Border Reduce
+      </p>
       <input
         type="range"
         min={0}

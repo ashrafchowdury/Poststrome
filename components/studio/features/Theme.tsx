@@ -5,13 +5,13 @@ const Theme = () => {
   const { mediaTheme, setMediaTheme } = useStudio();
   return (
     <>
-      <p className=" text-sm font-medium mb-4">Media Theme</p>
+      <p className=" md:text-sm text-xs font-medium mb-4">Media Theme</p>
       <div className=" flex items-center">
         <div className=" flex flex-col items-center">
           <button
             className={`${
               mediaTheme == "dark" && "ring-2 ring-neutral-200"
-            } glass w-[37px] h-[37px] rounded-lg flex items-center justify-center`}
+            } glass md:w-[37px] md:h-[37px] w-8 h-8 rounded-lg flex items-center justify-center`}
             onClick={() => setMediaTheme("dark")}
           >
             <MoonIcon />
@@ -22,7 +22,7 @@ const Theme = () => {
           <button
             className={`${
               mediaTheme == "light" && "ring-2 ring-neutral-200"
-            } glass w-[37px] h-[37px] rounded-lg flex items-center justify-center`}
+            } glass md:w-[37px] md:h-[37px] w-8 h-8 rounded-lg flex items-center justify-center`}
             onClick={() => setMediaTheme("light")}
           >
             <SunIcon />

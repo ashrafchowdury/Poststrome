@@ -10,7 +10,7 @@
 
 @layer utilities {
   body {
-    background-image: url(".././public/bg2.svg");
+    background-image: url(".././public/bg.svg");
     background-attachment: fixed;
     background-color: black;
   }

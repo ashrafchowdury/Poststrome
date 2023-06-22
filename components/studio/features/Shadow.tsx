@@ -8,7 +8,9 @@ const Shadow = () => {
 
   return (
     <>
-      <p className=" text-sm font-medium mb-4">Image Shadow</p>
+      <p className=" md:text-sm text-xs font-medium md:mb-4 mb-2">
+        Image Shadow
+      </p>
       <input
         type="range"
         min={0}

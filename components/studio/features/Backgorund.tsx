@@ -11,19 +11,25 @@ const Backgorund = () => {
   const { setMediaBg } = useStudio();
   return (
     <>
-      <p className=" text-sm font-medium mb-2">Normal Colors</p>
+      <p className=" md:text-sm text-xs font-medium md:mb-2 mb-1">
+        Normal Colors
+      </p>
       <BgColors
         colors={defaultBg.colors}
         generateBg={() => hexGenerator(setMediaBg)}
       />
 
-      <p className=" text-sm font-medium mb-2 mt-8">Gradiants</p>
+      <p className=" md:text-sm text-xs font-medium md:mb-2 mb-1 md:mt-8 mt-4">
+        Gradiants
+      </p>
       <BgColors
         colors={defaultBg.linear}
         generateBg={() => gradiantGenerator(setMediaBg)}
       />
 
-      <p className=" text-sm font-medium mb-2 mt-8">Mesh Gradiant</p>
+      <p className=" md:text-sm text-xs font-medium md:mb-2 mb-1 md:mt-8 mt-4">
+        Mesh Gradiant
+      </p>
       <BgColors
         colors={defaultBg.mesh}
         generateBg={() => meshGenerator(setMediaBg)}
@@ -47,7 +53,7 @@ export const BgColors = ({ colors, generateBg }: BgColorsType) => {
             <button
               className={` ${
                 data == mediaBg && "ring-2 ring-neutral-200"
-              } w-[35px] h-[35px] rounded-lg mr-3 my-2 duration-200`}
+              } md:w-[35px] md:h-[35px] w-7 h-7 rounded-lg md:mr-3 mr-2 my-2 duration-200`}
               style={{ background: data, backgroundColor: `#${data}` }}
               key={data}
               onClick={() => setMediaBg(data)}
@@ -56,7 +62,7 @@ export const BgColors = ({ colors, generateBg }: BgColorsType) => {
         })}
 
         <button
-          className="glass w-[37px] h-[37px] rounded-lg mr-3 my-2 flex items-center justify-center"
+          className="glass md:w-[35px] md:h-[35px] w-7 h-7 rounded-lg md:mr-3 mr-2 my-2 flex items-center justify-center"
           onClick={generateBg}
         >
           <RotateIcon />

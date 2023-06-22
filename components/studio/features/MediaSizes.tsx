@@ -6,7 +6,9 @@ const MediaSizes = () => {
   const { mediaSizes, setMediaSizes, mediaScale, setMediaScale } = useStudio();
   return (
     <>
-      <p className=" text-sm font-medium mb-4">Different Sizes</p>
+      <p className=" md:text-sm text-xs font-medium md:mb-4 mb-2">
+        Different Sizes
+      </p>
       <div className=" flex flex-wrap items-center">
         {sizes.map((data, ind) => {
           const width = data.size.slice(0, data.size.indexOf("x")).trim();
@@ -18,7 +20,7 @@ const MediaSizes = () => {
                 className={` ${
                   `${height}px` == mediaSizes.height &&
                   "ring-2 ring-neutral-200"
-                } glass w-[37px] h-[37px] rounded-lg flex items-center justify-center`}
+                } glass md:w-[37px] md:h-[37px] w-8 h-8 rounded-lg flex items-center justify-center`}
                 onClick={() => {
                   setMediaSizes({ width: `${width}px`, height: `${height}px` });
                 }}
@@ -31,7 +33,9 @@ const MediaSizes = () => {
         })}
       </div>
 
-      <p className=" text-sm font-medium mb-4 mt-8">Zoom In & Zoom Out</p>
+      <p className=" md:text-sm text-xs font-medium md:mb-4 mb-2 md:mt-8 mt-5">
+        Zoom In & Zoom Out
+      </p>
       <input
         type="range"
         min={0.6}
