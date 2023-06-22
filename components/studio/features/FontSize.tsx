@@ -5,7 +5,9 @@ const FontSize = () => {
   const { fontSize, setFontSize } = useStudio();
   return (
     <>
-      <p className=" text-sm font-medium mb-4">Media Font Size</p>
+      <p className=" md:text-sm text-xs font-medium md:mb-4 mb-2">
+        Media Font Size
+      </p>
       <input
         type="range"
         min={14}
