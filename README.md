@@ -1,34 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![image](https://cloud.appwrite.io/v1/storage/buckets/647f538eb065d9f2b8d8/files/649442e1b675abbae170/view?project=645dc450a76ad06dddca&mode=admin)
 
-## Getting Started
+ 
 
-First, run the development server:
+<h1 align="center"><a target="_blank" href="https://poststrome.vercel.app/">Poststrome</a>
+</h1>
+<p align="center">An open-source repository image generator<p>
+ 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+<p align="center"><a target="_blank" href="https://github.com/ashrafchowdury/poststrome#top-features"><strong>Top Features</strong></a>
+ · <a target="_blank" href="https://github.com/ashrafchowdury/poststrome#tech-stack"><strong>Tech Stack</strong></a>
+ · <a target="_blank" href="https://github.com/ashrafchowdury/poststrome#contributing"><strong>Contributing</strong></a>
+ · <a target="_blank" href="https://github.com/ashrafchowdury/poststrome#license"><strong>License</strong></a>
+ <a target="_blank" href="https://github.com/ashrafchowdury/novel#license"><strong> </strong></a>
+· <a target="_blank" href="https://github.com/ashrafchowdury/poststrome#support"><strong>Support</strong></a>
+<p>
+ 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Top Features
+ 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+*   Unique Backgrounds
+     
+*   Different device sizes
+     
+*   Image Shadow
+     
+*   Different colour borders
+     
+*   Rewrite description
+     
+*   Save Template
+     
+*   Copy & Past Image
+     
+*   Download image
+     
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Tech Stack
+ 
+Poststrome is built on the following stack:
+ 
 
-## Learn More
+*   **Next.js** – framework
+     
+*   **Typescript** - main language
+     
+*   **Vercel** – deployments
+     
+*   **TailwindCSS** – styles
+     
+*   **GitHub API** – data center
+     
+*   **Dom-to-image & File saver** - to download image
+     
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
+ 
+Here's how you can contribute:
+ 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+*   [Open an issue](https://github.com/ashrafchowdury/poststrome/issues)  if you believe you've encountered a bug.
+     
+*   Make a [pull request](https://github.com/ashrafchowdury/poststrome/pulls)  to add new features/make quality-of-life improvements/fix bugs.
+     
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Author
+ 
 
-## Deploy on Vercel
+*   Ashraf Chowdury ([@ahsraf\_chowdury](https://twitter.com/ashraf_chowdury))
+     
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
+ 
+Licensed under the [MIT license](https://github.com/ashrafchowdury/poststrome/blob/main/LICENSE).
+ 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🙏 Support
+ 
+Don't forget to leave a star to support us ⭐️
