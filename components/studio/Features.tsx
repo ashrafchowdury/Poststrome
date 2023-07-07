@@ -2,7 +2,7 @@
 
 import FeaturesEditor from "./FeatureEditor";
 import { useStudio } from "@/context/StudioContext";
-import { feaures } from "@/utils/helpers/features";
+import { features } from "@/utils";
 
 const Features = () => {
   const { isEditor, setIsEditor, isDownload } = useStudio();
@@ -15,13 +15,13 @@ const Features = () => {
   };
 
   return (
-    <aside className="lg:w-auto md:w-[720px] sm:w-[90%] w-full flex items-center flex-row-reverse lg:relative fixed z-30 bottom-0">
+    <aside className="lg:w-auto md:w-[720px] h-48 sm:w-[90%] w-full flex items-center flex-row-reverse lg:relative fixed z-30 bottom-0">
       {isEditor && <FeaturesEditor />}
 
       <section className="glass relative lg:w-[80px] md:w-[720px] w-full lg:py-4 py-4 lg:rounded-xl rounded-t-lg flex lg:flex-col items-center justify-center lg:space-y-5 lg:space-x-0 sm:space-x-4 sm:overflow-x-hidden overflow-x-auto">
-        <div className=" sm:hidden mx-5 w-[35px] h-[35px]"></div>
-        <div className=" sm:hidden mx-5 w-[35px] h-[35px]"></div>
-        {feaures.map((data, ind) => {
+        <div className=" sm:hidden sm:mx-0 mx-5 w-[35px] h-[35px]"></div>
+        <div className=" sm:hidden sm:mx-0 mx-5 w-[35px] h-[35px]"></div>
+        {features.map((data, ind) => {
           return (
             <div
               className="xl:w-[55px] lg:w-[50px] w-full sm:overflow-hidden flex flex-col items-center sm:mx-0 mx-3"
@@ -40,7 +40,7 @@ const Features = () => {
             </div>
           );
         })}
-        <div className=" sm:hidden mx-5 w-[35px] h-[35px]"></div>
+        <div className=" sm:hidden sm:mx-0 mx-5 w-[35px] h-[35px]"></div>
       </section>
     </aside>
   );

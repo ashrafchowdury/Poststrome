@@ -1,6 +1,6 @@
 "use client";
 
-import Logo from "../ui/Logo";
+import { Logo } from "../ui";
 import {
   DownloadIcon,
   CopyIcon,
@@ -9,8 +9,7 @@ import {
   LoadingIcon,
 } from "../ui/Icons";
 import { useStudio } from "@/context/StudioContext";
-import { downloadImage } from "@/utils/functions/downloadImage";
-import { copyImage } from "@/utils/functions/copyImage";
+import { downloadImage, copyImage } from "@/utils";
 import Link from "next/link";
 
 const Navigation = () => {

@@ -1,7 +1,7 @@
 "use client";
 import { useStudio } from "@/context/StudioContext";
-import { Repository } from "./medias/Repository";
-import GithubSkeleton from "../ui/skeletons/GithubSkeleton";
+import { GithubSkeleton } from "../skeletons";
+import { renderTemplates } from "@/utils";
 
 const Media = () => {
   const {
@@ -9,6 +9,7 @@ const Media = () => {
     borders,
     mediaBg,
     mediaRef,
+    mediaTemplates,
   } = useStudio();
 
   return (
@@ -28,7 +29,11 @@ const Media = () => {
           backgroundColor: mediaBg.length > 6 ? "" : `#${mediaBg}`,
         }}
       >
-        {data == undefined ? <GithubSkeleton /> : <Repository />}
+        {data == undefined ? (
+          <GithubSkeleton />
+        ) : (
+          renderTemplates(mediaTemplates)
+        )}
       </div>
     </section>
   );

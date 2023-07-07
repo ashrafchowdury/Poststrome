@@ -6,7 +6,7 @@ import {
   StarsIcon,
   TwitterIcon,
 } from "@/components/ui/Icons";
-import Logo from "@/components/ui/Logo";
+import { Logo } from "@/components";
 
 export default function Home() {
   return (

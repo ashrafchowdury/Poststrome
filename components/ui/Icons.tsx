@@ -25,6 +25,7 @@ import {
   BsInstagram,
   BsEye,
   BsLayersHalf,
+  BsWindowFullscreen,
 } from "react-icons/bs";
 import {
   BiUndo,
@@ -197,4 +198,8 @@ export const ShadowIcon = ({ style }: IconcType) => {
 
 export const LoadingIcon = ({ style }: IconcType) => {
   return <BiLoader className={`${style}`} />;
+};
+
+export const TemplateIcon = ({ style }: IconcType) => {
+  return <BsWindowFullscreen className={`${style}`} />;
 };

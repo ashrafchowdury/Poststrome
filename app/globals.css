@@ -17,7 +17,7 @@
   .glass {
     box-sizing: border-box;
     background: rgba(217, 217, 217, 0.121);
-    backdrop-filter: blur(19.8478px);
+    backdrop-filter: blur(30px);
     border: 2px solid
       linear-gradient(
         180deg,

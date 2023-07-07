@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import { sizes } from "@/utils/helpers/mediaSizes";
+import { sizes } from "@/utils";
 import { useStudio } from "@/context/StudioContext";
 
 const MediaSizes = () => {

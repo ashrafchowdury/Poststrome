@@ -12,7 +12,7 @@ import {
   useRef,
   Ref,
 } from "react";
-import { apiCaller } from "@/utils/functions/apiCaller";
+import { apiCaller } from "@/utils";
 
 type SutdioContextType = {
   media: any;
@@ -39,6 +39,8 @@ type SutdioContextType = {
   setMediaRename: Dispatch<SetStateAction<string>>;
   mediaShadow: number;
   setMediaShadow: Dispatch<SetStateAction<number>>;
+  mediaTemplates: string;
+  setMediaTemplates: Dispatch<SetStateAction<string>>;
   isEditor: string;
   setIsEditor: Dispatch<SetStateAction<string>>;
   mediaRef: Ref<HTMLElement>;
@@ -55,7 +57,9 @@ const StudioContextProvider: FC<ChildrenType> = ({ children }) => {
   const [media, setMedia] = useState({});
   const [isDownload, setIsDownload] = useState(false);
   const [isError, setIsError] = useState("");
-  const [mediaBg, setMediaBg] = useState("ffafcc");
+  const [mediaBg, setMediaBg] = useState(
+    "linear-gradient(90deg, rgb(168, 255, 120), rgb(120, 255, 214))"
+  );
   const [mediaTheme, setMediaTheme] = useState("dark");
   const [fontSize, setFontSize] = useState(14);
   const [mediaSizes, setMediaSizes] = useState({
@@ -70,6 +74,7 @@ const StudioContextProvider: FC<ChildrenType> = ({ children }) => {
   });
   const [mediaShadow, setMediaShadow] = useState(0);
   const [mediaRename, setMediaRename] = useState("");
+  const [mediaTemplates, setMediaTemplates] = useState("repository");
   const [isEditor, setIsEditor] = useState("Add");
   // refs
   const mediaRef = useRef(null);
@@ -109,6 +114,8 @@ const StudioContextProvider: FC<ChildrenType> = ({ children }) => {
     setMediaRename,
     mediaShadow,
     setMediaShadow,
+    mediaTemplates,
+    setMediaTemplates,
     isEditor,
     setIsEditor,
     mediaRef,

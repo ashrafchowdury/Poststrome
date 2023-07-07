@@ -1,11 +1,11 @@
 import { RotateIcon } from "@/components/ui/Icons";
 import { useStudio } from "@/context/StudioContext";
-import { defaultBg } from "@/utils/helpers/defaultBg";
 import {
   hexGenerator,
   gradiantGenerator,
   meshGenerator,
-} from "@/utils/functions/bgGenerator";
+  defaultBg,
+} from "@/utils";
 
 const Backgorund = () => {
   const { setMediaBg } = useStudio();

@@ -1,6 +1,4 @@
-import Features from "@/components/studio/Features";
-import Navigation from "@/components/studio/Navigation";
-import Media from "@/components/studio/Media";
+import { Features, Media, Navigation } from "@/components";
 
 const Studio = () => {
   return (

@@ -9,10 +9,9 @@ import {
   PrIcon,
   StarIcon,
 } from "@/components/ui/Icons";
-import Image from "next/image";
 import { useStudio } from "@/context/StudioContext";
 
-export const Repository = () => {
+const Repository = () => {
   const {
     media: { data },
     mediaRename,
@@ -171,3 +170,5 @@ export const Repository = () => {
     </>
   );
 };
+
+export default Repository;

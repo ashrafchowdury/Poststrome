@@ -1,11 +1,14 @@
-import Backgorund from "@/components/studio/features/Backgorund";
-import FontSize from "@/components/studio/features/FontSize";
-import Theme from "@/components/studio/features/Theme";
-import Border from "@/components/studio/features/Border";
-import Rename from "@/components/studio/features/Rename";
-import MediaSizes from "@/components/studio/features/MediaSizes";
-import Add from "@/components/studio/features/Add";
-import Shadow from "@/components/studio/features/Shadow";
+import {
+  FontSize,
+  Backgorund,
+  Theme,
+  Border,
+  Rename,
+  MediaSizes,
+  Add,
+  Shadow,
+  Templates,
+} from "@/components";
 
 export const renderFeatures = (isEditor: string) => {
   switch (isEditor) {
@@ -23,6 +26,8 @@ export const renderFeatures = (isEditor: string) => {
       return <Add />;
     case "Shadow":
       return <Shadow />;
+    case "Templates":
+      return <Templates />;
     default:
       return <div>Invalid feature selected</div>;
   }

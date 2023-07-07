@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useStudio } from "@/context/StudioContext";
 import { SearchIcon } from "../../ui/Icons";
-import { apiCaller } from "@/utils/functions/apiCaller";
+import { apiCaller } from "@/utils";
 
 const Add = () => {
   const [isError, setIsError] = useState("");
