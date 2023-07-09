@@ -8,7 +8,7 @@ const Features = () => {
   const { isEditor, setIsEditor, isDownload } = useStudio();
 
   return (
-    <aside className=" lg:w-auto md:w-[720px] h-48 sm:w-[90%] w-full flex items-center flex-row-reverse lg:relative fixed z-30 -bottom-12">
+    <aside className=" lg:w-auto md:w-[720px] h-48 sm:w-[90%] w-full flex items-center flex-row-reverse lg:relative lg:bottom-0 fixed z-30 -bottom-12">
       {isEditor && <FeaturesEditor />}
 
       <section className="glass relative lg:w-[80px] md:w-[720px] w-full lg:py-4 py-4 lg:rounded-xl rounded-t-lg flex lg:flex-col items-center justify-center lg:space-y-5 lg:space-x-0 sm:space-x-4 sm:overflow-x-hidden overflow-x-auto">
