@@ -6,16 +6,9 @@ import { features } from "@/utils";
 
 const Features = () => {
   const { isEditor, setIsEditor, isDownload } = useStudio();
-  const handleEditor = (title: string) => {
-    if (title == isEditor) {
-      setIsEditor("");
-    } else {
-      setIsEditor(title);
-    }
-  };
 
   return (
-    <aside className="lg:w-auto md:w-[720px] h-48 sm:w-[90%] w-full flex items-center flex-row-reverse lg:relative fixed z-30 bottom-0">
+    <aside className=" lg:w-auto md:w-[720px] h-48 sm:w-[90%] w-full flex items-center flex-row-reverse lg:relative fixed z-30 -bottom-12">
       {isEditor && <FeaturesEditor />}
 
       <section className="glass relative lg:w-[80px] md:w-[720px] w-full lg:py-4 py-4 lg:rounded-xl rounded-t-lg flex lg:flex-col items-center justify-center lg:space-y-5 lg:space-x-0 sm:space-x-4 sm:overflow-x-hidden overflow-x-auto">
@@ -29,7 +22,11 @@ const Features = () => {
             >
               <button
                 className="glass xl:w-[45px] xl:h-[45px] lg:w-[42px] lg:h-[42px] md:w-[40px] md:h-[40px] sm:w-[36px] sm:h-[36px] w-[35px] h-[35px] xl:text-xl lg:text-lg md:text-[16px] text-sm rounded-lg flex items-center justify-center"
-                onClick={() => handleEditor(data.title)}
+                onClick={() =>
+                  data.title == isEditor
+                    ? setIsEditor("")
+                    : setIsEditor(data.title)
+                }
                 disabled={isDownload}
               >
                 {data.icon}

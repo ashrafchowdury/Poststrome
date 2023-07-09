@@ -10,6 +10,7 @@ const Media = () => {
     mediaBg,
     mediaRef,
     mediaTemplates,
+    isLoading,
   } = useStudio();
 
   return (
@@ -29,10 +30,18 @@ const Media = () => {
           backgroundColor: mediaBg.length > 6 ? "" : `#${mediaBg}`,
         }}
       >
-        {data == undefined ? (
+        {isLoading == "idl" ? (
           <GithubSkeleton />
         ) : (
-          renderTemplates(mediaTemplates)
+          <>
+            {isLoading == "error" ? (
+              <p className=" font-bold text-xl text-center text-black">
+                Something went wrong!
+              </p>
+            ) : (
+              renderTemplates(mediaTemplates)
+            )}
+          </>
         )}
       </div>
     </section>

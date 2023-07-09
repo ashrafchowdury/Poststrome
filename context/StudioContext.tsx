@@ -12,7 +12,7 @@ import {
   useRef,
   Ref,
 } from "react";
-import { apiCaller } from "@/utils";
+import { fetchData } from "@/utils";
 
 type SutdioContextType = {
   media: any;
@@ -43,6 +43,8 @@ type SutdioContextType = {
   setMediaTemplates: Dispatch<SetStateAction<string>>;
   isEditor: string;
   setIsEditor: Dispatch<SetStateAction<string>>;
+  isLoading: "idl" | "success" | "error";
+  setIsLoading: Dispatch<SetStateAction<"idl" | "success" | "error">>;
   mediaRef: Ref<HTMLElement>;
 };
 
@@ -76,19 +78,18 @@ const StudioContextProvider: FC<ChildrenType> = ({ children }) => {
   const [mediaRename, setMediaRename] = useState("");
   const [mediaTemplates, setMediaTemplates] = useState("repository");
   const [isEditor, setIsEditor] = useState("Add");
+  const [isLoading, setIsLoading] = useState<"idl" | "success" | "error">(
+    "idl"
+  );
   // refs
   const mediaRef = useRef(null);
 
   useEffect(() => {
-    try {
-      apiCaller(
-        "api/repository",
-        "https://github.com/ashrafchowdury/dotemd",
-        setMedia
-      );
-    } catch (error) {
-      console.log(error);
-    }
+    fetchData(
+      "https://github.com/ashrafchowdury/dotemd",
+      setMedia,
+      setIsLoading
+    );
   }, []);
 
   const value: SutdioContextType = {
@@ -118,6 +119,8 @@ const StudioContextProvider: FC<ChildrenType> = ({ children }) => {
     setMediaTemplates,
     isEditor,
     setIsEditor,
+    isLoading,
+    setIsLoading,
     mediaRef,
   };
 

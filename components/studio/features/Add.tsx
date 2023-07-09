@@ -2,11 +2,11 @@
 import { useState } from "react";
 import { useStudio } from "@/context/StudioContext";
 import { SearchIcon } from "../../ui/Icons";
-import { apiCaller } from "@/utils";
+import { fetchData } from "@/utils";
 
 const Add = () => {
   const [isError, setIsError] = useState("");
-  const { setMedia } = useStudio();
+  const { setMedia, setIsLoading } = useStudio();
 
   const handleSearchURL = (event: any) => {
     event.preventDefault();
@@ -14,7 +14,7 @@ const Add = () => {
 
     if (url?.includes("https://github.com/")) {
       setMedia({});
-      apiCaller("api/repository", url, setMedia);
+      fetchData(url, setMedia, setIsLoading);
       isError && setIsError("");
     } else {
       setIsError("Please Add Valid URL");
