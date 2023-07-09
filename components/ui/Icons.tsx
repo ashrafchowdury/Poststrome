@@ -26,6 +26,7 @@ import {
   BsEye,
   BsLayersHalf,
   BsWindowFullscreen,
+  BsCardImage,
 } from "react-icons/bs";
 import {
   BiUndo,
@@ -43,6 +44,7 @@ import {
   BiLoader,
 } from "react-icons/bi";
 import { GoLaw } from "react-icons/go";
+import { FcAddImage, FcFolder, FcFlashOn } from "react-icons/fc";
 
 type IconcType = {
   style?: string;
@@ -202,4 +204,16 @@ export const LoadingIcon = ({ style }: IconcType) => {
 
 export const TemplateIcon = ({ style }: IconcType) => {
   return <BsWindowFullscreen className={`${style}`} />;
+};
+
+export const ColorImageIcon = ({ style }: IconcType) => {
+  return <FcAddImage className={`${style}`} />;
+};
+
+export const ColorFolderIcon = ({ style }: IconcType) => {
+  return <FcFolder className={`${style}`} />;
+};
+
+export const ColorFlashIcon = ({ style }: IconcType) => {
+  return <FcFlashOn className={`${style}`} />;
 };

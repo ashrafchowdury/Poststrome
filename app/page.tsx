@@ -5,6 +5,9 @@ import {
   LinkedinIcon,
   StarsIcon,
   TwitterIcon,
+  ColorImageIcon,
+  ColorFlashIcon,
+  ColorFolderIcon,
 } from "@/components/ui/Icons";
 import { Logo } from "@/components";
 
@@ -24,11 +27,11 @@ export default function Home() {
       <header className=" relative flex flex-col items-center sm:mt-28 mt-20">
         <div className="lg:w-[650px] md:w-[80%] w-[90%] text-center">
           <h1 className="heading lg:text-6xl md:text-5xl sm:text-4xl text-3xl lg:leading-[70px] font-bold">
-            Shine Your Post To The World
+            Create Engaging Repository Visuals!
           </h1>
           <p className=" lg:text-lg md:text-[16px] text-sm w-[80%] mx-auto font-light mt-4">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam
-            illum, voluptates illo quis sunt qui.
+            Enhance Repository Visibility and Engagement through Compelling
+            Images and Tailored Templates.
           </p>
         </div>
         <Link href="/studio">
@@ -49,15 +52,79 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="sm:mt-[240px] mt-[130px] w-full flex sm:flex-row flex-col items-center justify-center">
-        <div className="lg:w-[950px] md:w-[620px] sm:w-[350px] w-[90%] flex lg:flex-row flex-col lg:flex-wrap ">
-          <div className="glass xl:w-[400px] xl:h-[400px] lg:w-[330px] lg:h-[330px] md:w-[360px] md:h-[360px] sm:w-[250px] sm:h-[250px] w-full h-[280px] rounded-2xl sm:m-2 my-2 p-4 overflow-hidden"></div>
-          <div className="glass xl:w-[400px] xl:h-[400px] lg:w-[330px] lg:h-[330px] md:w-[360px] md:h-[360px] sm:w-[250px] sm:h-[250px] w-full h-[280px] rounded-2xl sm:m-2 my-2 p-4 overflow-hidden"></div>
+      <section className="sm:mt-[180px] mt-[130px] mx-auto w-full flex lg:flex-row flex-col items-center justify-center">
+        <div className="lg:w-[950px] md:w-[620px] sm:w-[450px] w-full flex lg:flex-row flex-col lg:flex-wrap ">
+          <div className="glass xl:w-[400px] xl:h-[290px] lg:w-[330px] lg:h-[260px] w-full h-auto rounded-2xl sm:m-2 my-2 lg:p-10 p-8 overflow-hidden">
+            <div className="glass xl:w-14 xl:h-14 lg:w-12 lg:h-12 md:w-10 md:h-10 w-8 h-8  flex items-center justify-center rounded-lg mb-4">
+              <ColorImageIcon style="xl:text-3xl lg:text-[28px] md:text-2xl text-xl" />
+            </div>
+            <p className=" lg:text-xl md:text-lg text-[16px] font-bold md:mb-5 mb-3">
+              Images
+            </p>
+            <p className="break-all md:text-sm text-xs">
+              Generate public repository images with different templates and
+              matrics with customization options. Then download or Copy it
+              according to your need.
+            </p>
+          </div>
+          <div className="glass xl:w-[400px] xl:h-[290px] lg:w-[330px] lg:h-[260px] w-full h-auto rounded-2xl sm:m-2 my-2 lg:p-10 p-8 overflow-hidden">
+            <div className="glass xl:w-14 xl:h-14 lg:w-12 lg:h-12 md:w-10 md:h-10 w-8 h-8  flex items-center justify-center rounded-lg mb-4">
+              <ColorFlashIcon style="xl:text-3xl lg:text-[28px] md:text-2xl text-xl" />
+            </div>
+            <p className=" lg:text-xl md:text-lg text-[16px] font-bold md:mb-5 mb-3">
+              Customizations
+            </p>
+            <p className="break-all md:text-sm text-xs">
+              Customize the repository image, change the background colour and
+              shadows and choose different platforms to glorify it more, then
+              download or copy it to share on different social media.
+            </p>
+          </div>
 
-          <div className="glass xl:w-[820px] xl:h-[400px] lg:w-[680px] lg:h-[330px] rounded-2xl m-2 p-4 overflow-hidden hidden lg:block"></div>
+          <div className="glass hidden lg:flex items-center space-x-5 justify-center xl:w-[820px] xl:h-[290px] lg:w-[680px] lg:h-[260px] rounded-2xl m-2 lg:p-10 p-8 overflow-hidden">
+            <img
+              src="temp_two.png"
+              className=" lg:w-[360px] md:w-[250px] w-full rounded-xl"
+              alt="Template Image"
+            />
+            <img
+              src="temp_three.png"
+              className=" lg:w-[360px] md:w-[250px] w-full rounded-xl"
+              alt="Template Image"
+            />
+            <img
+              src="temp_one.png"
+              className=" lg:w-[360px] md:w-[250px] w-full rounded-xl"
+              alt="Template Image"
+            />
+          </div>
         </div>
 
-        <div className="glass xl:w-[450px] xl:h-[815px] lg:w-[420px] lg:h-[680px] md:w-[550px] md:h-[740px] sm:w-[320px] sm:h-[520px] w-[90%] h-[500px] rounded-2xl sm:m-2 my-2 p-4 overflow-hidden"></div>
+        <div className="glass flex flex-col space-y-6 items-center xl:w-[450px] xl:h-[600px] lg:w-[420px] lg:h-[540px] md:w-[620px] sm:w-[450px] w-full h-auto rounded-2xl lg:m-2 my-2 lg:p-10 p-8 overflow-hidden">
+          <div>
+            <div className="glass xl:w-14 xl:h-14 lg:w-12 lg:h-12 md:w-10 md:h-10 w-8 h-8  flex items-center justify-center rounded-lg mb-4">
+              <ColorFolderIcon style="xl:text-3xl lg:text-[28px] md:text-2xl text-xl" />
+            </div>
+            <p className=" lg:text-xl md:text-lg text-[16px] font-bold md:mb-5 mb-3">
+              Templates
+            </p>
+            <p className="break-all md:text-sm text-xs">
+              Choose different templates and customize them according to your
+              need, then download or copy them to share on social media to
+              engage your users.
+            </p>
+          </div>
+          <img
+            src="temp_two.png"
+            className="w-full rounded-xl"
+            alt="templates"
+          />
+          <img
+            src="temp_four.png"
+            className="  w-full rounded-xl"
+            alt="templates"
+          />
+        </div>
       </section>
 
       <footer className=" mt-28">
